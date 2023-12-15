@@ -1,0 +1,122 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/generate_network.css" />
+    <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <!-- link to javascript to handle query to output html -->
+    <script type="text/javascript" src="js/generate_network.js"></script>
+    <!-- link to cytoscape -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/2.7.10/cytoscape.js"></script>
+
+    <!-- javascript to autocomplete user input to output html from DYNAMIC querying  -->
+    <script> 
+      $( function() {
+        var availableTags = [];
+        $( "#search_input" ).autocomplete({
+            //source: availableTags//,
+            source: "./autocomplete.cgi",
+            select: function(event, ui) {
+                availableTags = ui.item;
+            } 
+        });
+      });
+    </script>
+</head>
+
+<body>
+    <!-- <script>
+        var cy = cytoscape({
+          container: document.getElementById('cy'),
+          
+          elements: {
+            nodes: [
+                {data: { id: 'a' },
+                    grabbable : true,
+                    selectable: true
+                },
+                {data: { id: 'b' } },
+                {data: { id: 'c' } }
+            ],
+            edges: [
+                { data: { id: 'ab', source: 'a', target: 'b' } 
+                },
+                { data: { id: 'ca', source: 'c', target: 'a' }
+                }
+            ],
+          },
+          
+          style: [ // the stylesheet for the graph
+            {
+                selector: 'node',
+                style: {
+                    'background-color': '#666',
+                    'label': 'data(id)'
+                }
+            },
+            {
+                selector: 'edge',
+                style: {
+                  'width': 3,
+                  'line-color': '#ccc',
+                  'target-arrow-color': '#ccc',
+                  'target-arrow-shape': 'triangle',
+                  'curve-style': 'bezier'
+                }
+              }
+            ],
+
+            layout: {
+                name: 'grid',
+                rows: 2
+              }
+        });
+    </script> -->
+</body>
+<body id="main">
+	<h1 style="background-color:#e6eaeb;"> Let's Generate a Gene Interaction Network! </h1>
+    <p>Note: generating the network may take 30-60 seconds</p>
+    <div class="ui-widget"> 
+        <form name="gene_search" id="gene_search" action="">
+            <label for="search_input">Gene name: </label>
+            <input id = "search_input" name="search_term" type="search" value="" autofocus="autofocus" placeholder="Enter a search term (ex: Rap1gds1 or Dgki)"/>
+            <input id="submit" name="submit" type="submit" value="Submit"> 
+        </form>
+    </div>
+    <div id="progressbar"></div>
+
+    <section id='cytoscape_results'>
+        <h2 id="network_h2"> Orthologous Human Interactions </h2>
+        <p>*Drag the nodes around!*</p>
+        <div id="cy"></div>
+    </section>
+    
+    <section id='results'>
+        <h2> Mouse Interactions </h2>
+        <p>
+            <span id='match_count'>0</span> interaction(s) found.
+        </p>
+        <table>
+            <thead>
+            <tr>
+                <td>#</td>
+                <td>Gene A Interactant Mouse ID</td>
+                <td>Gene A Human Entrez ID</td>
+                <td>Gene A Human Symbol</td>
+                <td>Gene B Interactant Mouse ID</td>
+                <td>Gene B Human Entrez ID</td>
+                <td>Gene B Human Symbol</td>
+                
+            </tr>
+            </thead>
+            <tbody >
+                <!-- this will be filled in by javascript when there are results -->
+            </tbody>
+    </section>
+
+</body>
+</html>
