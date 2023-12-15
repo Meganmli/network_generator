@@ -1,2 +1,7 @@
 # network_generator
 Creates a network of mouse gene interactions represented by their orthologous human genes interactions
+
+## Set-up & Requirements
+1. Install requirements from requirements.txt
+2. If `./data/publications.csv` is absent, run `prep_work.py` to generate it. This is a one-time call to format all publication counts for each human gene.
+
