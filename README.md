@@ -8,6 +8,9 @@ Creates a network of mouse gene interactions represented by their orthologous hu
 ## Demonstration
 <kbd>![alt text](https://github.com/Meganmli/network_generator/blob/main/img/step1.png)</kbd>
 
+<kbd><img src="https://github.com/Meganmli/network_generator/blob/main/img/step2.png" /></kbd>
+
+
 ![alt text](https://github.com/Meganmli/network_generator/blob/main/img/step2.png)
 
 ![alt text](https://github.com/Meganmli/network_generator/blob/main/img/step3.jpg)
