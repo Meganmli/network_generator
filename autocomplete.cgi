@@ -12,7 +12,7 @@ def main():
     term = form.getvalue('term') 
 
     # update connection credentials
-    username = 'megan_li'; password = 'abc123'
+    username = 'UPDATE ME'; password = 'UPDATE ME'
     host = 'mgi-adhoc.jax.org'; port = 5432; db_name = 'mgd'; jdbc_url = "jdbc:postgresql://mgi-adhoc.jax.org:5432/mgd "
     conn = psycopg2.connect(database=db_name, host=host, user=username, password=password, port=port)
     cursor = conn.cursor()
