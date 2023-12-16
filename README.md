@@ -6,11 +6,13 @@ Creates a network of mouse gene interactions represented by their orthologous hu
 2. If `./data/publications.csv` is absent, run `prep_work.py` to generate it. This is a one-time call to format all publication counts for each human gene.
 
 ## Demonstration
+
+Load the website at \href{http://bfx3.aap.jhu.edu/mli186/project/network.html}{Gene Network Generator Site} or go to the url: \url{http://bfx3.aap.jhu.edu/mli186/project/network.html}
+
 <kbd>![alt text](https://github.com/Meganmli/network_generator/blob/main/img/step1.png)</kbd>
 
-<kbd><img src="https://github.com/Meganmli/network_generator/blob/main/img/step2.png" /></kbd>
+Submit a mouse gene name. Autocompletion provides gene name options. Once submitted, be patient as the network takes time to generate.
+<kbd>![alt text](https://github.com/Meganmli/network_generator/blob/main/img/step2.png)</kbd>
 
-
-![alt text](https://github.com/Meganmli/network_generator/blob/main/img/step2.png)
-
-![alt text](https://github.com/Meganmli/network_generator/blob/main/img/step3.jpg)
+Explore the network by dragging around the nodes. Explore the static interaction table below.
+<kbd>![alt text](https://github.com/Meganmli/network_generator/blob/main/img/step3.jpg)</kbd>
