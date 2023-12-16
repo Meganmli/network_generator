@@ -7,8 +7,7 @@ Creates a network of mouse gene interactions represented by their orthologous hu
 
 ## Demonstration
 
-Load the website at \href{http://bfx3.aap.jhu.edu/mli186/project/network.html}{Gene Network Generator Site} or go to the url: \url{http://bfx3.aap.jhu.edu/mli186/project/network.html}
-
+Load the website at [Gene Network Generator Site](http://bfx3.aap.jhu.edu/mli186/project/network.html) or click the url: http://bfx3.aap.jhu.edu/mli186/project/network.html
 <kbd>![alt text](https://github.com/Meganmli/network_generator/blob/main/img/step1.png)</kbd>
 
 Submit a mouse gene name. Autocompletion provides gene name options. Once submitted, be patient as the network takes time to generate.
